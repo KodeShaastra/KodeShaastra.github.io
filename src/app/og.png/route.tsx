@@ -1,13 +1,13 @@
 import { ImageResponse } from "next/og";
 import { profile } from "@/lib/profile";
 
-// The picture LinkedIn, WhatsApp, Slack etc. show when someone shares your link. Made at build time.
-export const alt = `${profile.name}: ${profile.headline.fullstack}`;
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
-export const dynamic = "force-static"; // needed for the static build
+// The picture LinkedIn, WhatsApp, Slack etc. show when someone shares the link.
+// Made once at build time and saved as /og.png (a real .png name, so every host serves it as an image).
+export const dynamic = "force-static";
 
-export default function Image() {
+const OG_SIZE = { width: 1200, height: 630 };
+
+export function GET() {
   return new ImageResponse(
     (
       <div
@@ -32,6 +32,6 @@ export default function Image() {
         </div>
       </div>
     ),
-    size,
+    OG_SIZE,
   );
 }

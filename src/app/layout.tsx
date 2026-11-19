@@ -15,8 +15,14 @@ export const metadata: Metadata = {
   title,
   description: profile.specialty,
   authors: [{ name: profile.name }],
-  openGraph: { type: "profile", title, description: profile.specialty, url: "/" },
-  twitter: { card: "summary_large_image", title, description: profile.specialty },
+  openGraph: {
+    type: "profile",
+    title,
+    description: profile.specialty,
+    url: "/",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: `${profile.name}: ${profile.headline.fullstack}` }],
+  },
+  twitter: { card: "summary_large_image", title, description: profile.specialty, images: ["/og.png"] },
 };
 
 export const viewport: Viewport = {
