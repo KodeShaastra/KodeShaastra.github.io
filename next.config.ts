@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Build to plain files in /out, so the site can be hosted free anywhere (Vercel, GitHub Pages, Cloudflare).
+  output: "export",
   turbopack: {
     rules: {
       "*.css": {

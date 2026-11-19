@@ -1,0 +1,268 @@
+{
+  "name": "Prashant Singh",
+  "headline": {
+    "fullstack": "Full-Stack Engineer · Data-heavy web apps",
+    "frontend": "Frontend Engineer · Data-heavy web apps"
+  },
+  "specialty": "I build the complex, data-heavy parts of SaaS products: dashboard builders, report builders, live maps and big data tables. In React and Next.js, with the backend when needed.",
+  "openTo": "Full-time roles (remote, hybrid or on-site, happy to relocate) and freelance projects.",
+  "location": "Kotdwara, India · Open to remote and relocation",
+  "email": "prashubisht07@gmail.com",
+  "links": [
+    {
+      "label": "linkedin.com/in/prashant15798",
+      "url": "https://www.linkedin.com/in/prashant15798/"
+    },
+    {
+      "label": "github.com/KodeShaastra",
+      "url": "https://github.com/KodeShaastra"
+    }
+  ],
+  "summary": {
+    "fullstack": "Full-stack engineer with 4+ years of experience building the data-heavy parts of SaaS products: dashboard builders, report builders and live maps, from the React UI down to the API and database. At Unolo, a field-force SaaS used by Uber, Rapido, Hero FinCorp and Adani, I built the Custom Dashboards and GIS map modules that 1,000+ people use every day. My own projects ship end to end on Next.js, Node.js, GraphQL, PostgreSQL and AWS.",
+    "frontend": "Frontend engineer with 4+ years of experience, specialising in complex, data-heavy interfaces: drag-and-drop dashboard builders, report builders and live maps that stay fast with large datasets. At Unolo, a field-force SaaS used by Uber, Rapido, Hero FinCorp and Adani, I built the Custom Dashboards and GIS map modules that 1,000+ people use every day, and cut initial load time by about 20%. Strong in React, Next.js, TypeScript and GraphQL, and comfortable on the Node.js side when needed."
+  },
+  "focus": [
+    {
+      "title": "Dashboard builders",
+      "text": "Drag-and-resize dashboards with charts, KPI cards and shared filters that save themselves as you work."
+    },
+    {
+      "title": "Live maps",
+      "text": "Maps with live GPS, heatmaps and clustered markers that stay smooth with very large numbers of points."
+    },
+    {
+      "title": "Reports & big tables",
+      "text": "Report builders, fast data tables and bulk Excel imports, so people can get answers out of their own data."
+    }
+  ],
+  "experience": [
+    {
+      "company": "Unolo",
+      "about": "Field-force management SaaS",
+      "role": "SDE-2 (Frontend)",
+      "location": "Gurugram, India",
+      "start": "2024-04",
+      "end": "present",
+      "bullets": [
+        "Built the **Custom Dashboards** module: users drag, resize, share and clone dashboards made of **7 chart types, 9 KPI types and map widgets**, with auto-save and shared filters (React Grid Layout, Highcharts, Apollo GraphQL).",
+        "Built the **GIS map engine** inside dashboards: point maps, heatmaps and clustered markers on Google Maps with Deck.gl. Used Supercluster so maps stay smooth with very large point sets, and cached reverse-geocoding to stop repeat Google Maps API calls.",
+        "Built the drag-and-drop **Custom Report builder** (React, TanStack Table, React Flow) with advanced filters, so customers can answer questions the standard reports can't.",
+        "Cut initial load time by **~20%** by splitting code, lazy-loading the heavy map and chart libraries, and trimming GraphQL queries.",
+        "Owned the frontend side of the **GraphQL contract** for dashboards and reports with the backend team.",
+        "Mentor junior developers on React architecture, reusable component patterns and Next.js SSR."
+      ]
+    },
+    {
+      "company": "Unolo",
+      "about": "Field-force management SaaS",
+      "role": "SDE-1 (Frontend)",
+      "location": "Gurugram, India",
+      "start": "2023-03",
+      "end": "2024-03",
+      "bullets": [
+        "Built **live GPS tracking** screens with React and WebSockets, showing field staff moving on a map in real time.",
+        "Built **bulk Excel upload** flows so admins import large client and site lists in one go instead of adding them one by one.",
+        "Built shared TypeScript + Tailwind UI components reused across modules, keeping screens consistent.",
+        "Connected React and Redux screens to REST and GraphQL APIs, keeping live data in sync.",
+        "Made the web app work well on mobile screens with React, Redux and Tailwind CSS."
+      ]
+    },
+    {
+      "company": "Quantiphi",
+      "about": "AI and data engineering services",
+      "role": "Platform Engineer",
+      "location": "Mumbai, India",
+      "start": "2021-04",
+      "end": "2022-03",
+      "bullets": [
+        "Ran AWS infrastructure (EC2, S3, Athena) and built Python tools to monitor usage and cut cloud costs.",
+        "Built automated reports and data-quality dashboards with Python, pandas and SQL."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "DSA Sheet",
+      "oneLiner": "Full-stack practice tracker: students work through DSA problems, tick them off and plan them on a calendar.",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "TanStack Query",
+        "Express",
+        "PostgreSQL",
+        "AWS"
+      ],
+      "live": "https://d3n7j7klp7qcc3.cloudfront.net",
+      "code": [
+        "https://github.com/KodeShaastra/Dsa-sheet-app-frontend",
+        "https://github.com/KodeShaastra/Dsa-sheet-app-backend"
+      ],
+      "bullets": [
+        "Designed for 10k–50k active users, and wrote the system design (HLD) and database schema (LLD) docs.",
+        "Cookie login with refresh tokens, and optimistic updates so ticks feel instant.",
+        "Deployed on AWS: CloudFront → EC2 → Nginx, serving Next.js and Express on one domain (no CORS)."
+      ]
+    },
+    {
+      "name": "Career Glider",
+      "oneLiner": "Reads my Gmail, uses Claude AI to sort job-search emails by type, and shows them in a searchable dashboard.",
+      "stack": [
+        "Node.js",
+        "GraphQL",
+        "Prisma",
+        "PostgreSQL",
+        "Claude API",
+        "Gmail API",
+        "Next.js"
+      ],
+      "code": [
+        "https://github.com/KodeShaastra/career-glider-backend",
+        "https://github.com/KodeShaastra/career-glider-frontend"
+      ],
+      "bullets": [
+        "GraphQL API that pulls Gmail with rate-limit handling and classifies each email with the Claude API.",
+        "Unit tests for the AI parser and Gmail throttling; typed error codes across the API."
+      ]
+    }
+  ],
+  "skills": {
+    "fullstack": [
+      {
+        "label": "Languages",
+        "items": [
+          "JavaScript (ES6+)",
+          "TypeScript",
+          "SQL",
+          "Python"
+        ]
+      },
+      {
+        "label": "Frontend",
+        "items": [
+          "React",
+          "Next.js (App Router, SSR)",
+          "Redux",
+          "TanStack Query",
+          "Tailwind CSS",
+          "MUI"
+        ]
+      },
+      {
+        "label": "Backend",
+        "items": [
+          "Node.js",
+          "Express",
+          "GraphQL (Apollo)",
+          "REST",
+          "WebSockets",
+          "Prisma"
+        ]
+      },
+      {
+        "label": "Data & cloud",
+        "items": [
+          "PostgreSQL",
+          "MongoDB",
+          "AWS (EC2, S3, CloudFront, Athena)",
+          "Nginx"
+        ]
+      },
+      {
+        "label": "Charts & maps",
+        "items": [
+          "Highcharts",
+          "Recharts",
+          "Deck.gl",
+          "Google Maps API",
+          "React Grid Layout",
+          "React Flow"
+        ]
+      },
+      {
+        "label": "AI & tools",
+        "items": [
+          "Claude API",
+          "Jest",
+          "Git"
+        ]
+      }
+    ],
+    "frontend": [
+      {
+        "label": "Core",
+        "items": [
+          "React",
+          "Next.js (App Router, SSR)",
+          "TypeScript",
+          "JavaScript (ES6+)",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "label": "Data & state",
+        "items": [
+          "Apollo GraphQL",
+          "TanStack Query",
+          "Redux",
+          "REST",
+          "WebSockets"
+        ]
+      },
+      {
+        "label": "UI",
+        "items": [
+          "Tailwind CSS",
+          "MUI",
+          "Shared component libraries",
+          "Responsive design"
+        ]
+      },
+      {
+        "label": "Charts & maps",
+        "items": [
+          "Highcharts",
+          "Recharts",
+          "Deck.gl",
+          "Google Maps API",
+          "Supercluster",
+          "React Grid Layout",
+          "React Flow",
+          "TanStack Table"
+        ]
+      },
+      {
+        "label": "Performance",
+        "items": [
+          "Code splitting",
+          "Lazy loading",
+          "Memoisation",
+          "Caching"
+        ]
+      },
+      {
+        "label": "Also",
+        "items": [
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "AWS",
+          "Claude API",
+          "Jest",
+          "Git"
+        ]
+      }
+    ]
+  },
+  "education": [
+    {
+      "degree": "B.Tech, Computer Science & Engineering",
+      "school": "Lovely Professional University",
+      "place": "Phagwara, Punjab",
+      "start": "2017",
+      "end": "2021"
+    }
+  ],
+  "updatedAt": "2026-11-19"
+}
