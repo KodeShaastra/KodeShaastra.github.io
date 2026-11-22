@@ -25,7 +25,8 @@ const btnOutline = `${btn} border border-accent text-accent hover:bg-accent-soft
 const role = profile.headline.fullstack.split(" · ")[0];
 const github = profile.links.find((l) => l.url.includes("github.com"));
 const linkedin = profile.links.find((l) => l.url.includes("linkedin.com"));
-const blog = profile.blog || undefined;
+// Link to the blog only once it has a post, so nobody lands on an empty blog.
+const blog = posts.length ? profile.blog || undefined : undefined;
 
 // "Writing" only appears once there are posts on the blog.
 const NAV: NavItem[] = [
