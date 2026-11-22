@@ -18,16 +18,21 @@ export function GET() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 72,
-          background: "#0c0c0e",
-          color: "#ececef",
+          borderBottom: "12px solid #5eead4",
+          background: "#283041",
+          color: "#eaeff6",
           fontFamily: "sans-serif",
         }}
       >
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 72, fontWeight: 700, letterSpacing: -2 }}>{profile.name}</div>
-          <div style={{ marginTop: 12, fontSize: 36, color: "#7c9cff" }}>{profile.headline.fullstack}</div>
+          <div style={{ display: "flex", fontSize: 72, fontWeight: 700, letterSpacing: -2 }}>
+            <span style={{ color: "#5eead4" }}>{"</ "}</span>
+            {profile.name}
+            <span style={{ color: "#5eead4" }}>{" >"}</span>
+          </div>
+          <div style={{ marginTop: 12, fontSize: 36, color: "#5eead4" }}>{profile.headline.fullstack}</div>
         </div>
-        <div style={{ fontSize: 34, lineHeight: 1.4, color: "#a1a1aa", maxWidth: 1000 }}>
+        <div style={{ fontSize: 34, lineHeight: 1.4, color: "#a7b1c2", maxWidth: 1000 }}>
           {profile.focus.map((f) => f.title).join(" · ")}
         </div>
       </div>

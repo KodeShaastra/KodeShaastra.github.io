@@ -50,6 +50,9 @@ export const PROJECT_IMAGES: Record<string, { src: string; alt: string }> = {
   },
 };
 
+/** Same photo as my GitHub profile picture (already public). Replace public/me.webp to change it. */
+export const PHOTO = { src: "/me.webp", alt: "Prashant Singh" };
+
 export const CV_FILES: { variant: Variant; label: string; href: string }[] = [
   { variant: "fullstack", label: "Full-stack CV", href: "/cv/Prashant_Singh_FullStack.pdf" },
   { variant: "frontend", label: "Frontend CV", href: "/cv/Prashant_Singh_Frontend.pdf" },

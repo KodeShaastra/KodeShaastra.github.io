@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Poppins } from "next/font/google";
 import { profile } from "@/lib/profile";
 import "./globals.css";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const poppins = Poppins({ variable: "--font-poppins", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-// Set SITE_URL to the real address when it's live (e.g. on Vercel), so link previews work.
+// Set SITE_URL to the real address when it's live, so link previews work. (The GitHub build sets it.)
 const siteUrl = process.env.SITE_URL ?? "http://localhost:3000";
 const title = `${profile.name} · ${profile.headline.fullstack}`;
 
@@ -26,15 +26,13 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fafaf9" },
-    { media: "(prefers-color-scheme: dark)", color: "#0c0c0e" },
-  ],
+  themeColor: "#283041",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" className={`${poppins.variable} ${geistMono.variable} antialiased`}>
       <body className="min-h-dvh font-sans">{children}</body>
     </html>
   );
