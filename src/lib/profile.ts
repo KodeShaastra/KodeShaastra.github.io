@@ -28,6 +28,8 @@ export interface PublicProfile {
   headline: Record<Variant, string>;
   specialty: string;
   openTo: string;
+  /** Hashnode blog address, or "" when there's no blog yet. */
+  blog: string;
   location: string;
   email: string;
   links: { label: string; url: string }[];

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "posts": "node scripts/fetch-posts.mjs",
+    "prebuild": "node scripts/fetch-posts.mjs"
   },
   "dependencies": {
     "next": "16.4.6",

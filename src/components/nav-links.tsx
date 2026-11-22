@@ -2,16 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-const NAV = [
-  { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
-  { id: "work", label: "Work" },
-  { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
-];
+export type NavItem = { id: string; label: string };
 
 /** Top menu. Underlines the section you're looking at. */
-export function NavLinks() {
+export function NavLinks({ items: NAV }: { items: NavItem[] }) {
   const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
@@ -28,7 +22,7 @@ export function NavLinks() {
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, []);
+  }, [NAV]);
 
   return (
     <nav aria-label="Sections" className="flex items-center gap-1 text-sm">

@@ -1,9 +1,12 @@
-# Builds the site and publishes it on GitHub Pages every time I push to main.
+# Builds the site and publishes it on GitHub Pages every time I push to main, and once a day.
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
+  # Rebuild every day at 08:00 India time, so new blog posts show up on their own.
+  schedule:
+    - cron: "30 2 * * *"
   workflow_dispatch:
 
 permissions:

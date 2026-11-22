@@ -9,10 +9,11 @@ import {
   shortUrl,
   type Project,
 } from "@/lib/profile";
-import { ArrowUpRightIcon, DownloadIcon, GitHubIcon, LinkedInIcon, linkIcon, MailIcon, PinIcon } from "@/components/icons";
+import { ArrowUpRightIcon, DownloadIcon, GitHubIcon, HashnodeIcon, LinkedInIcon, linkIcon, MailIcon, PinIcon } from "@/components/icons";
 import { HeroArt } from "@/components/hero-art";
 import { InboxArt } from "@/components/inbox-art";
-import { NavLinks } from "@/components/nav-links";
+import { NavLinks, type NavItem } from "@/components/nav-links";
+import { formatDate, posts } from "@/lib/posts";
 import { Skyline } from "@/components/skyline";
 import { TechLogos } from "@/components/tech-icons";
 
@@ -24,6 +25,17 @@ const btnOutline = `${btn} border border-accent text-accent hover:bg-accent-soft
 const role = profile.headline.fullstack.split(" · ")[0];
 const github = profile.links.find((l) => l.url.includes("github.com"));
 const linkedin = profile.links.find((l) => l.url.includes("linkedin.com"));
+const blog = profile.blog || undefined;
+
+// "Writing" only appears once there are posts on the blog.
+const NAV: NavItem[] = [
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "work", label: "Work" },
+  { id: "projects", label: "Projects" },
+  ...(posts.length ? [{ id: "writing", label: "Writing" }] : []),
+  { id: "contact", label: "Contact" },
+];
 
 function Rich({ text }: { text: string }) {
   return (
@@ -127,12 +139,13 @@ export default function Home() {
     jobTitle: role,
     email: `mailto:${profile.email}`,
     image: PHOTO.src,
-    sameAs: profile.links.map((l) => l.url),
+    sameAs: [...profile.links.map((l) => l.url), ...(blog ? [blog] : [])],
   };
   const contactRows = [
     { href: `mailto:${profile.email}`, text: profile.email, icon: <MailIcon className="size-5" /> },
     ...(github ? [{ href: github.url, text: shortUrl(github.url), icon: <GitHubIcon className="size-5" /> }] : []),
     ...(linkedin ? [{ href: linkedin.url, text: shortUrl(linkedin.url), icon: <LinkedInIcon className="size-5" /> }] : []),
+    ...(blog ? [{ href: blog, text: shortUrl(blog), icon: <HashnodeIcon className="size-5" /> }] : []),
     { href: undefined, text: profile.location, icon: <PinIcon className="size-5" /> },
   ];
 
@@ -147,7 +160,7 @@ export default function Home() {
             {profile.name}
             <span className="font-mono text-accent">{">"}</span>
           </a>
-          <NavLinks />
+          <NavLinks items={NAV} />
         </div>
       </header>
 
@@ -202,6 +215,11 @@ export default function Home() {
                 {linkedin && (
                   <a href={linkedin.url} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-fg">
                     <LinkedInIcon className="size-6" />
+                  </a>
+                )}
+                {blog && (
+                  <a href={blog} target="_blank" rel="noreferrer" aria-label="Blog" className="hover:text-fg">
+                    <HashnodeIcon className="size-6" />
                   </a>
                 )}
               </div>
@@ -301,6 +319,47 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Writing: my newest blog posts (hidden until there is at least one) */}
+        {posts.length > 0 && (
+          <section id="writing" className="relative">
+            <div className="mx-auto max-w-6xl px-4 pt-6 pb-16 sm:px-8">
+              <Title sub="Notes on real problems I've solved">Writing</Title>
+              <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {posts.map((post) => (
+                  <li key={post.url}>
+                    <a
+                      href={post.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group flex h-full flex-col overflow-hidden rounded-lg border border-line bg-surface transition-colors hover:border-accent"
+                    >
+                      {post.cover && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={post.cover} alt="" width={1600} height={840} loading="lazy" className="aspect-[40/21] w-full object-cover" />
+                      )}
+                      <div className="flex flex-1 flex-col p-5">
+                        <p className="font-mono text-xs text-faint">{formatDate(post.date)}</p>
+                        <h3 className="mt-2 font-semibold leading-snug group-hover:text-accent">{post.title}</h3>
+                        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted">{post.summary}</p>
+                        <p className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-medium text-accent">
+                          Read post <ArrowUpRightIcon />
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              {blog && (
+                <div className="mt-10 flex justify-center">
+                  <a href={blog} target="_blank" rel="noreferrer" className={btnOutline}>
+                    <HashnodeIcon /> All posts
+                  </a>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
 
         {/* Contact */}
         <section id="contact" className="relative">

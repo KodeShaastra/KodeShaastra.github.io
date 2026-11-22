@@ -1,3 +1,5 @@
+import { siHashnode } from "simple-icons";
+
 // Small inline icons, so the site needs no icon library.
 type P = { className?: string };
 
@@ -54,8 +56,17 @@ export function LinkedInIcon({ className = "size-4" }: P) {
   );
 }
 
+export function HashnodeIcon({ className = "size-4" }: P) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
+      <path d={siHashnode.path} />
+    </svg>
+  );
+}
+
 export function linkIcon(url: string, className?: string) {
   if (url.includes("github.com")) return <GitHubIcon className={className} />;
+  if (url.includes("hashnode")) return <HashnodeIcon className={className} />;
   if (url.includes("linkedin.com")) return <LinkedInIcon className={className} />;
   return <ArrowUpRightIcon className={className} />;
 }
