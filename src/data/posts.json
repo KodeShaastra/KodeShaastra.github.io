@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "title": "How I keep a map smooth with 100,000 points",
+    "summary": "Too many markers make Google Maps slow. Group points with Supercluster, draw only what's on screen, and render with deck.gl. Real numbers inside.",
+    "url": "https://kodeshaastra.hashnode.dev/google-maps-100000-points-without-lag",
+    "date": "2026-11-22",
+    "tags": [
+      "google maps",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "cover": "https://cdn.hashnode.com/uploads/covers/64fc95e0466db6993c871305/4720ff0f-a328-4590-bca5-41cc80e29102.png"
+  }
+]

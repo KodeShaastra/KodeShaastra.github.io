@@ -164,7 +164,6 @@
         "label": "Data & cloud",
         "items": [
           "PostgreSQL",
-          "MongoDB",
           "AWS (EC2, S3, CloudFront, Athena)",
           "Nginx"
         ]
