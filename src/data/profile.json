@@ -19,8 +19,8 @@
     }
   ],
   "summary": {
-    "fullstack": "Full-stack engineer with 4+ years of experience building the data-heavy parts of SaaS products: dashboard builders, report builders and live maps, from the React UI down to the API and database. At Unolo, a field-force SaaS used by Uber, Rapido, Hero FinCorp and Adani, I built the Custom Dashboards and GIS map modules. My own projects ship end to end on Next.js, Node.js, GraphQL, PostgreSQL and AWS.",
-    "frontend": "Frontend engineer with 4+ years of experience, specialising in complex, data-heavy interfaces: drag-and-drop dashboard builders, report builders and live maps that stay fast with large datasets. At Unolo, a field-force SaaS used by Uber, Rapido, Hero FinCorp and Adani, I built the Custom Dashboards and GIS map modules, and made the app load faster by lazy-loading heavy libraries. Strong in React, Next.js, TypeScript and GraphQL, and comfortable on the Node.js side when needed."
+    "fullstack": "Full-stack engineer with 4+ years of experience building the data-heavy parts of SaaS products: dashboard builders, report builders and live maps, from the React UI down to the API and database. At Unolo, a field-force management SaaS, I built the Custom Dashboards and GIS map modules. My own projects ship end to end on Next.js, Node.js, GraphQL, PostgreSQL and AWS.",
+    "frontend": "Frontend engineer with 4+ years of experience, specialising in complex, data-heavy interfaces: drag-and-drop dashboard builders, report builders and live maps that stay fast with large datasets. At Unolo, a field-force management SaaS, I built the Custom Dashboards and GIS map modules, and made the app load faster by lazy-loading heavy libraries. Strong in React, Next.js, TypeScript and GraphQL, and comfortable on the Node.js side when needed."
   },
   "focus": [
     {
