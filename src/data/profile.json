@@ -19,8 +19,8 @@
     }
   ],
   "summary": {
-    "fullstack": "Full-stack engineer with 4+ years of experience building the data-heavy parts of SaaS products: dashboard builders, report builders and live maps, from the React UI down to the API and database. At Unolo, a field-force SaaS used by Uber, Rapido, Hero FinCorp and Adani, I built the Custom Dashboards and GIS map modules that 1,000+ people use every day. My own projects ship end to end on Next.js, Node.js, GraphQL, PostgreSQL and AWS.",
-    "frontend": "Frontend engineer with 4+ years of experience, specialising in complex, data-heavy interfaces: drag-and-drop dashboard builders, report builders and live maps that stay fast with large datasets. At Unolo, a field-force SaaS used by Uber, Rapido, Hero FinCorp and Adani, I built the Custom Dashboards and GIS map modules that 1,000+ people use every day, and cut initial load time by about 20%. Strong in React, Next.js, TypeScript and GraphQL, and comfortable on the Node.js side when needed."
+    "fullstack": "Full-stack engineer with 4+ years of experience building the data-heavy parts of SaaS products: dashboard builders, report builders and live maps, from the React UI down to the API and database. At Unolo, a field-force SaaS used by Uber, Rapido, Hero FinCorp and Adani, I built the Custom Dashboards and GIS map modules. My own projects ship end to end on Next.js, Node.js, GraphQL, PostgreSQL and AWS.",
+    "frontend": "Frontend engineer with 4+ years of experience, specialising in complex, data-heavy interfaces: drag-and-drop dashboard builders, report builders and live maps that stay fast with large datasets. At Unolo, a field-force SaaS used by Uber, Rapido, Hero FinCorp and Adani, I built the Custom Dashboards and GIS map modules, and made the app load faster by lazy-loading heavy libraries. Strong in React, Next.js, TypeScript and GraphQL, and comfortable on the Node.js side when needed."
   },
   "focus": [
     {
@@ -49,7 +49,7 @@
         "Built the **Custom Dashboards** module: users drag, resize, share and clone dashboards made of **7 chart types, 9 KPI types and map widgets**, with auto-save and shared filters (React Grid Layout, Highcharts, Apollo GraphQL).",
         "Built the **GIS map engine** inside dashboards: point maps, heatmaps and clustered markers on Google Maps with Deck.gl. Used Supercluster so maps stay smooth with very large point sets, and cached reverse-geocoding to stop repeat Google Maps API calls.",
         "Built the drag-and-drop **Custom Report builder** (React, TanStack Table, React Flow) with advanced filters, so customers can answer questions the standard reports can't.",
-        "Cut initial load time by **~20%** by splitting code, lazy-loading the heavy map and chart libraries, and trimming GraphQL queries.",
+        "Made the app **load faster** by splitting code, lazy-loading the heavy map and chart libraries, and trimming GraphQL queries.",
         "Owned the frontend side of the **GraphQL contract** for dashboards and reports with the backend team.",
         "Mentor junior developers on React architecture, reusable component patterns and Next.js SSR."
       ]
@@ -265,5 +265,5 @@
       "end": "2021"
     }
   ],
-  "updatedAt": "2026-11-22"
+  "updatedAt": "2026-11-23"
 }
